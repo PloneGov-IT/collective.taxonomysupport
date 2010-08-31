@@ -1,0 +1,40 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: collective.taxonomysupport\n"
+"POT-Creation-Date: 2010-08-26 09:48+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
+"Last-Translator: Andrea Cecchi <andrea.cecchi@redturtle.it>\n"
+"Language-Team: RedTurtle Technology <info@redturtle.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0\n"
+"Language-Code: it\n"
+"Language-Name: Italian\n"
+"Preferred-Encodings: utf-8 latin1\n"
+"Domain: collective.taxonomysupport\n"
+
+#. Default: "A folder used to build the site taxonomy."
+#: ./profiles/default/types/FolderTaxonomy.xml
+msgid "A folder used to build the site taxonomy."
+msgstr "Una Cartella usata per creare la tassonomia del sito."
+
+#. Default: "Folder Taxonomy"
+#: ./profiles/default/types/Structured_News.xml
+msgid "Folder Taxonomy"
+msgstr "Cartella Tassonomia"
+
+#. Default: "Site areas"
+#: extender.py
+msgid "label_site_areas"
+msgstr "Aree del sito"
+
+#. Default: "Select some site areas."
+#: extender.py
+msgid "help_site_areas"
+msgstr "Seleziona delle aree del sito."
+
+#. Default: "Site areas"
+#: ./profiles/default/portal_atct.xml
+msgid "Site areas"
+msgstr "Area del sito"

@@ -1,0 +1,14 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="collective.taxonomysupport">
+
+  <include package="plone.app.contentmenu" />
+
+  <!--DIRECTORY REGISTRATION-->
+  <browser:resourceDirectory
+        name="collective.taxonomysupport.images"
+        directory="images"
+        />
+
+</configure>
