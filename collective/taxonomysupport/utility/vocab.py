@@ -21,8 +21,11 @@ def taxonomyvocab(context):
             parent_sections.add(section.getPath())
     if not parent_sections:
         #no one activated section in the tree of current object
-        return []
-
+        root=context.portal_url.getPortalObject()
+        if not ITaxonomyLevel.providedBy(root):
+            return []
+        parent_sections.add('/'.join(root.getPhysicalPath()))
+        
     first_activated_parent=max(parent_sections)
     taxonomies=pc(portal_type="FolderTaxonomy",path=first_activated_parent,sort_on="sortable_title")
     if not taxonomies:
