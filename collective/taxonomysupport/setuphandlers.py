@@ -31,4 +31,5 @@ def getKeysToAdd():
     @author: andrea cecchi
     @summary: returns a tuple of keys that should be added to portal_catalog
     '''
-    return (('SiteAreas','KeywordIndex',{'indexed_attrs': 'SiteAreas', }),)
+    return (('SiteAreas','KeywordIndex',{'indexed_attrs': 'SiteAreas', }),
+            ('getSiteAreas','KeywordIndex',{'indexed_attrs': 'getSiteAreas', }),)

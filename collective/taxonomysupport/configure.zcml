@@ -62,4 +62,20 @@
         replacement=".monkey.showAreas"
 		ignoreOriginal="True"
         />
+	
+  <monkey:patch
+        description="patch to add an index with UIDS"
+        class="Products.Archetypes.BaseObject.BaseObject"
+        original="getSiteAreas"
+        replacement=".monkey.getSiteAreas"
+		ignoreOriginal="True"
+        />
+		
+  <monkey:patch
+        description="patch to add an index with UIDS"
+        class="Products.Archetypes.BaseObject.BaseObject"
+        original="getRawSiteAreas"
+        replacement=".monkey.getRawSiteAreas"
+		ignoreOriginal="True"
+        />	
 </configure>

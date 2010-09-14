@@ -2,6 +2,8 @@ from collective.taxonomysupport.interfaces import ITaxonomyLayer
 from zope.component import getUtility, queryUtility
 from zope.schema.interfaces import IVocabularyFactory
 from Products.CMFCore.utils import getToolByName
+from Acquisition import aq_chain
+from collective.taxonomysupport.interfaces import IFolderTaxonomy
 
 def getDefaultTaxonomy(self):
     if not self.REQUEST.__provides__(ITaxonomyLayer):
@@ -17,6 +19,19 @@ def getDefaultTaxonomy(self):
         if elem.value == taxonomy_folder[0].UID():
             return elem.value
     return ''
+
+def getSiteAreas(self):
+        """Generated accessor"""
+        return self.getRawSiteAreas()
+
+def getRawSiteAreas(self):
+    """Generated raw accessor"""
+    siteAreas = list(self.getField('siteAreas').get(self))
+    for parent in aq_chain(self):
+        if IFolderTaxonomy.providedBy(parent):
+            siteAreas.append(parent.UID())
+    no_dupl = set(siteAreas)
+    return tuple(no_dupl)
 
 def SiteAreas(self):
         """Generated indexes"""
