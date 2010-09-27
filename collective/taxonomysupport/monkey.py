@@ -26,6 +26,8 @@ def getSiteAreas(self):
 
 def getRawSiteAreas(self):
     """Generated raw accessor"""
+    if not self.getField('siteAreas'):
+        return tuple()
     siteAreas = list(self.getField('siteAreas').get(self))
     for parent in aq_chain(self):
         if IFolderTaxonomy.providedBy(parent):

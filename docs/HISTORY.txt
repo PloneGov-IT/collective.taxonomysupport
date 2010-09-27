@@ -1,8 +1,13 @@
 Changelog
 =========
 
-1.0.0 - Unreleased
-----------------
+1.0.1 (Unreleased)
+------------------
+
+* collective.taxonomysupport was breaking some contents like EasyNewsletter [keul]
+
+1.0.0
+-----
 
 * Initial release
 
