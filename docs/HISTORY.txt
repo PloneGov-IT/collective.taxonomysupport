@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.1 (Unreleased)
+1.0.1 (2010-09-27)
 ------------------
 
 * collective.taxonomysupport was breaking some contents like EasyNewsletter [keul]
