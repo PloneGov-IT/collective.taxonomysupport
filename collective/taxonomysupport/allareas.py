@@ -82,4 +82,4 @@ class ATAllAreasCriterion(ATBaseCriterion):
 
         return tuple(result)
 
-registerCriterion(ATSelectionCriterion, LIST_INDICES)
+registerCriterion(ATAllAreasCriterion, LIST_INDICES)
