@@ -60,7 +60,7 @@ class ATAllAreasCriterion(ATBaseCriterion):
 
     __implements__ = ATBaseCriterion.__implements__ + (IATTopicSearchCriterion, )
     security       = ClassSecurityInfo()
-    schema         = ATSelectionCriterionSchema
+    schema         = ATAllAreasCriterionSchema
     meta_type      = 'ATAllAreasCriterion'
     archetype_name = 'Selection on Taxonomy Criterion'
     shortDesc      = 'Select values from list'
