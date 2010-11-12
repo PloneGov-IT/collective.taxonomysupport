@@ -44,10 +44,9 @@ def SiteAreas(self):
         if not areas:
             return ()
         listtitle = []
-        for elem in areas:
-            results = portal_catalog.searchResults(UID=elem)
-            if results:
-                listtitle.append(results[0].Title)
+        results = portal_catalog.searchResults(UID=areas)
+        if results:
+            listtitle.extend([x.Title for x in results])
         return tuple(listtitle)
 
 def showAreas(self):
