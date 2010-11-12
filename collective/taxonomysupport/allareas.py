@@ -66,7 +66,9 @@ class ATAllAreasCriterion(ATBaseCriterion):
 
     def getCurrentValues(self):
         catalog = getToolByName(self, 'portal_catalog')
-        results = catalog(object_provides=IFolderTaxonomy.__identifier__, sort_on='sortable_title')
+        results = catalog(object_provides=IFolderTaxonomy.__identifier__,
+                          sort_on='sortable_title',
+                          sort_order='reverse')
         return tuple(set([x.Title for x in results]))
 
     security.declareProtected(View, 'getCriteriaItems')
