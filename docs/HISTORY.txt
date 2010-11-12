@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.0.2 (2010-11-12)
+------------------
+
+* when used for collections, show all Taxonomy, not only the used ones [keul]
+
 1.0.1 (2010-09-27)
 ------------------
 
