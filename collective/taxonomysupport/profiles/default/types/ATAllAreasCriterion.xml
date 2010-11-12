@@ -3,7 +3,7 @@
    i18n:domain="collective.taxonomysupport" xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <property name="title" i18n:translate="">Selection on site Taxonomy Criterion</property>
  <property name="description"
-     i18n:translate="">A selection criterion on site Taxonomy folder</property>
+     i18n:translate="">A selection criterion on all Taxonomy folder in the site</property>
  <property name="content_icon">document_icon.gif</property>
  <property name="content_meta_type">ATAllAreasCriterion</property>
  <property name="product">collective.taxonomysupport</property>

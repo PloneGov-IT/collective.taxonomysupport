@@ -62,13 +62,12 @@ class ATAllAreasCriterion(ATBaseCriterion):
     security       = ClassSecurityInfo()
     schema         = ATAllAreasCriterionSchema
     meta_type      = 'ATAllAreasCriterion'
-    archetype_name = 'Selection on Taxonomy Criterion'
     shortDesc      = 'Select values from list'
 
     def getCurrentValues(self):
         catalog = getToolByName(self, 'portal_catalog')
-        results = catalog(object_provides=IFolderTaxonomy.__identifier__)
-        return [x.Title for x in results]
+        results = catalog(object_provides=IFolderTaxonomy.__identifier__, sort_on='sortable_title')
+        return tuple(set([x.Title for x in results]))
 
     security.declareProtected(View, 'getCriteriaItems')
     def getCriteriaItems(self):
