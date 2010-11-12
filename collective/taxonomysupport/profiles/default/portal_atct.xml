@@ -5,6 +5,8 @@
   <index name="SiteAreas" friendlyName="Site areas"
   	enabled="True" i18n:attributes="friendlyName">
    <criteria>ATSelectionCriterion</criteria>
+   <criteria>ATListCriterion</criteria>
+   <criteria>ATListCriterion</criteria>
   </index>
  </topic_indexes>
  <topic_metadata i18n:domain="plone">
