@@ -1,6 +1,13 @@
 Changelog
 =========
 
+1.1.0 (Unreleased)
+------------------
+
+* version 1.0.2 was bad; partial rever of changes [keul]
+* added a new collection criterion, only for Taxonomy [keul]
+* fixed translations [keul]
+
 1.0.2 (2010-11-12)
 ------------------
 

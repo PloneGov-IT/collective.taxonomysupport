@@ -21,3 +21,9 @@ msgstr "Cartella Tassonomia"
 
 msgid "Site areas"
 msgstr "Area del sito"
+
+msgid "A selection criterion on all Taxonomy in the site"
+msgstr "Un criterio di selezione sulle Tassonomie del sito"
+
+msgid "Select Taxonomy from list"
+msgstr "Seleziona Tassonomie da un elenco"
