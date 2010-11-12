@@ -36,15 +36,12 @@ def getRawSiteAreas(self):
     return tuple(no_dupl)
 
 def SiteAreas(self):
-        """Generated indexes"""
+        """Generated indexes; show all available site areas"""
         portal_catalog=getToolByName(self,'portal_catalog')
         if not self.REQUEST.__provides__(ITaxonomyLayer):
             return ()
-        areas=getattr(self,'siteAreas',())
-        if not areas:
-            return ()
         listtitle = []
-        results = portal_catalog.searchResults(UID=areas)
+        results = portal_catalog(object_provides=IFolderTaxonomy.__identifier__)
         if results:
             listtitle.extend([x.Title for x in results])
         return tuple(listtitle)
