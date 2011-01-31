@@ -5,7 +5,7 @@ This module contains the tool of collective.taxonomysupport
 import os
 from setuptools import setup, find_packages
 
-version = '1.1.0dev'
+version = '1.1.0'
 
 tests_require=['zope.testing']
 
