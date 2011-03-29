@@ -1,6 +1,6 @@
 from zope.schema.vocabulary import SimpleVocabulary,SimpleTerm
 from Products.CMFPlone.utils import getToolByName
-from collective.taxonomysupport.interfaces import ITaxonomyLevel
+from collective.taxonomysupport.interfaces import ITaxonomyLevel,IFolderTaxonomy
 
 def taxonomyvocab(context):
     """
@@ -27,7 +27,9 @@ def taxonomyvocab(context):
         parent_sections.add('/'.join(root.getPhysicalPath()))
         
     first_activated_parent=max(parent_sections)
-    taxonomies=pc(portal_type="FolderTaxonomy",path=first_activated_parent,sort_on="sortable_title")
+    taxonomies=pc(object_provides=IFolderTaxonomy.__identifier__,
+                  path=first_activated_parent,
+                  sort_on="sortable_title")
     if not taxonomies:
         return []
     terms=[]

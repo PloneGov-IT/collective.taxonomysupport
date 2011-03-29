@@ -9,11 +9,11 @@ differences when you add additional contents inside them (but to select a taxono
 you don't need that the content is inside it).
 
 Also the taxonomy support can/must explicitly enabled on the site and/or in one ore many of the
-site subsections. In this way you can have different Taxonomy configurationin different areas of
+site subsections. In this way you can have different Taxonomy configuration in different areas of
 the site.
 
 The list of taxonomies selectable is filtered locally if there are different sections activated
-with a marker interface (see instructions are below).
+with a marker interface (see instructions below).
 
 The activation of one section, block the inheritance of other taxonomies from upper levels.
 
@@ -25,7 +25,7 @@ The filtering policy is the following:
 taxonomy will be shown and so no one are selectable.
 * if there are one or more parents that provides the interface, we take the nearest parent and search
   its availables taxonomies.
-* if there aren't taxonomies, the field doesn't appears in the field edit form.
+* if there aren't taxonomies, or there isn't any activated object (object that implements ITaxonomyLevel interface. It could be also the site root) the field doesn't appears in the field edit form.
 * if an object is created inside a taxonomy, the taxonomy will be the default value in the field.
 
 Instructions
@@ -39,3 +39,5 @@ To activate the taxonomy level, you have to do the following steps:
 
 Sorry, right now the aren't any "user-friendly-Plone-UI-way" to do this.
 
+You can also mark an object as a Taxonomy.
+To do this, you need to do the previous steps, but for "*collective.taxonomysupport.interfaces.folder_taxonomy.IFolderTaxonomy*" interface.  

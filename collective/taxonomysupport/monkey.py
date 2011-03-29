@@ -12,7 +12,7 @@ def getDefaultTaxonomy(self):
     list_taxonomies=vocab(self)
     if not list_taxonomies:
         return ''
-    taxonomy_folder=[x for x in self.getFolderWhenPortalFactory().aq_chain if getattr(x,'portal_type','')=='FolderTaxonomy']
+    taxonomy_folder=[x for x in self.getFolderWhenPortalFactory().aq_chain if IFolderTaxonomy.providedBy(x)]
     if not taxonomy_folder:
         return ''
     for elem in list_taxonomies:

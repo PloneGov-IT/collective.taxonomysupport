@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.2.0-SVN_UNRELEASED (UNRELEASED)
+------------------
+
+* changed product to allow all contents to be a taxonomy, implementing IFolderTaxonomy [andrea]
+
 1.1.0 (Unreleased)
 ------------------
 
