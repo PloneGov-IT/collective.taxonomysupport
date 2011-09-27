@@ -1,10 +1,13 @@
+# --- PLEASE EDIT THE LINES BELOW CORRECTLY ---
+# SOME DESCRIPTIVE TITLE.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
-"Project-Id-Version: collective.taxonomysupport\n"
-"POT-Creation-Date: 2010-08-26 09:34+0000\n"
+"Project-Id-Version: PACKAGE VERSION\n"
+"POT-Creation-Date: 2011-05-18 08:13+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
-"Last-Translator: Andrea Cecchi <andrea.cecchi@redturtle.it>\n"
-"Language-Team: RedTurtle Technology <info@redturtle.net>\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -14,16 +17,7 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: plone\n"
 
-#. Default: "Folder Taxonomy"
-#: ./profiles/default/types/FolderTaxonomy.xml
-msgid "Folder Taxonomy"
-msgstr "Cartella Tassonomia"
+#. Default: "Look"
+msgid "label_schema_look"
+msgstr "Aspetto"
 
-msgid "Site areas"
-msgstr "Area del sito"
-
-msgid "A selection criterion on all Taxonomy in the site"
-msgstr "Un criterio di selezione sulle Tassonomie del sito"
-
-msgid "Select Taxonomy from list"
-msgstr "Seleziona Tassonomie da un elenco"

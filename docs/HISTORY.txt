@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 * changed product to allow all contents to be a taxonomy, implementing IFolderTaxonomy [andrea]
+* added tinyMCE configuration for FolderTaxonomy content [mirco]
 
 1.1.0 (Unreleased)
 ------------------
