@@ -11,9 +11,7 @@ from collective.taxonomysupport import taxonomysupportMessageFactory as _
 
 
 class siteAreasField(ExtensionField, LinesField):
-
-    pass
-
+    """Extension field for siteAreas"""
 
 
 class TaxonomyArchetypesExtender(object):

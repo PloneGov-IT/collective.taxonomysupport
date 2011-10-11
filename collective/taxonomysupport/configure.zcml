@@ -38,7 +38,8 @@
 	for="Products.ATContentTypes.interface.interfaces.IATContentType" 
 	provides="collective.taxonomysupport.interfaces.ITaxonomyLevel"    
 	name="taxonomy-level"/>
-	
+
+
   <monkey:patch
         description="monkeypatch to add getDefaultTaxonomy to all archetypes. But it works only if this product is installed"
         class="Products.Archetypes.BaseObject.BaseObject"
@@ -48,7 +49,7 @@
         />
   
   <monkey:patch
-        description="patch to add an atct index"
+        description="patch to add an ATCT index"
         class="Products.Archetypes.BaseObject.BaseObject"
         original="SiteAreas"
         replacement=".monkey.SiteAreas"

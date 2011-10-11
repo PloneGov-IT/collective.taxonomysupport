@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 from collective.taxonomysupport.interfaces import ITaxonomyLayer
 from zope.component import getUtility, queryUtility
 from zope.schema.interfaces import IVocabularyFactory
@@ -8,6 +10,7 @@ from collective.taxonomysupport.interfaces import IFolderTaxonomy
 def getDefaultTaxonomy(self):
     if not self.REQUEST.__provides__(ITaxonomyLayer):
         return ''
+
     vocab=queryUtility(IVocabularyFactory,name='collective.taxonomyvocab')
     list_taxonomies=vocab(self)
     if not list_taxonomies:
@@ -21,11 +24,14 @@ def getDefaultTaxonomy(self):
     return ''
 
 def getSiteAreas(self):
-        """Generated accessor"""
-        return self.getRawSiteAreas()
+    """Generated accessor"""
+    return self.getRawSiteAreas()
 
 def getRawSiteAreas(self):
     """Generated raw accessor"""
+    if not self.REQUEST.__provides__(ITaxonomyLayer):
+        return ()
+
     if not self.getField('siteAreas'):
         return tuple()
     siteAreas = list(self.getField('siteAreas').get(self))
@@ -35,23 +41,26 @@ def getRawSiteAreas(self):
     return tuple(set(siteAreas))
 
 def SiteAreas(self):
-        """Generated indexes; show all available site areas"""
-        portal_catalog=getToolByName(self,'portal_catalog')
-        if not self.REQUEST.__provides__(ITaxonomyLayer):
-            return ()
-        areas=getattr(self,'siteAreas',())
-        if not areas:
-            return ()
-        listtitle = []
-        results = portal_catalog.searchResults(UID=areas)
-        if results:
-            listtitle.extend([x.Title for x in results])
-        return tuple(listtitle)
+    """Generated indexes; show all available site areas"""
+    if not self.REQUEST.__provides__(ITaxonomyLayer):
+        return ()
+
+    portal_catalog=getToolByName(self,'portal_catalog')
+    areas = self.getRawSiteAreas()
+    if not areas:
+        return ()
+    listtitle = []
+    results = portal_catalog.searchResults(UID=areas)
+    if results:
+        listtitle.extend([x.Title for x in results])
+    return tuple(listtitle)
 
 def showAreas(self):
     if not self.REQUEST.__provides__(ITaxonomyLayer):
         return ''
-    vocab=queryUtility(IVocabularyFactory,name='collective.taxonomyvocab')
+
+    vocab=queryUtility(IVocabularyFactory, name='collective.taxonomyvocab')
     if not vocab(self):
         return False
     return True
+
