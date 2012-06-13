@@ -79,4 +79,5 @@
         replacement=".monkey.getRawSiteAreas"
 		ignoreOriginal="True"
         />
+
 </configure>

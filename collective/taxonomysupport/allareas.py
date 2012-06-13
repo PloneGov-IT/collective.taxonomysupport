@@ -21,6 +21,8 @@ from Products.ATContentTypes.criteria.schemata import ATBaseCriterionSchema
 from Products.ATContentTypes import ATCTMessageFactory as _
 
 from collective.taxonomysupport.interfaces import IFolderTaxonomy
+from zope.interface import implements
+
 
 CompareOperators = DisplayList((
                     ('and', _(u'and'))
@@ -57,8 +59,7 @@ ATAllAreasCriterionSchema = ATBaseCriterionSchema + Schema((
 
 class ATAllAreasCriterion(ATBaseCriterion):
     """A selection criterion on all Taxonomy in the site"""
-
-    __implements__ = ATBaseCriterion.__implements__ + (IATTopicSearchCriterion, )
+    implements (IATTopicSearchCriterion)
     security       = ClassSecurityInfo()
     schema         = ATAllAreasCriterionSchema
     meta_type      = 'ATAllAreasCriterion'

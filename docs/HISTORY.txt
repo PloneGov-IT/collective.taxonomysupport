@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 * Minor optimization and doc fixes [keul]
+* fixed Plone4 compatibility [andrea]
 
 1.2.0 (2011-09-27)
 ------------------
