@@ -38,3 +38,24 @@ msgstr "Seleziona delle aree del sito."
 #: ./profiles/default/portal_atct.xml
 msgid "Site areas"
 msgstr "Area del sito"
+
+#. Default: Add to taxonomy roots
+#: ./profiles/default/actions.xml
+msgid "Add to taxonomy roots"
+msgstr "Aggiungi alle radici di tassonomia"
+
+#. Default: Mark the folder as taxonomy root
+#: ./profiles/default/actions.xml
+msgid "Mark the folder as taxonomy root"
+msgstr "Indica che la cartella è una radice di tassonomia"
+
+#. Default: Remove from taxonomy roots
+#: ./profiles/default/actions.xml
+msgid "Remove from taxonomy roots"
+msgstr "Rimuovi dall'insieme delle radici di tassonomia"
+
+#. Default: Unmark the folder as a taxonomy root
+#: ./profiles/default/actions.xml
+msgid "Unmark the folder as a taxonomy root"
+msgstr "Indica che la cartella non sarà più radice di tassonomia"
+

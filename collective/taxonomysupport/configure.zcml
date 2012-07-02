@@ -10,14 +10,15 @@
 
   <!-- Include the sub-packages that use their own configure.zcml files. -->
   <i18n:registerTranslations directory="locales" />
-  
+
   <include package="archetypes.schemaextender" />
   <include package="collective.monkeypatcher" />
 
   <include package=".browser" />
   <include package=".content" />
   <include package=".utility" />
-  
+  <include package=".upgrades" />
+
   <!-- Register the installation GenericSetup extension profile -->
   <genericsetup:registerProfile
       name="default"
@@ -26,17 +27,17 @@
       description=""
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
-  
-  <adapter 
-	factory="collective.taxonomysupport.extender.TaxonomyArchetypesExtender" 
-	for="Products.ATContentTypes.interface.interfaces.IATContentType" 
-	provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"    
+
+  <adapter
+	factory="collective.taxonomysupport.extender.TaxonomyArchetypesExtender"
+	for="Products.ATContentTypes.interface.interfaces.IATContentType"
+	provides="archetypes.schemaextender.interfaces.IOrderableSchemaExtender"
 	name="taxonomy-extender"/>
-  
-  <adapter 
-	factory="collective.taxonomysupport.DummyAdapter" 
-	for="Products.ATContentTypes.interface.interfaces.IATContentType" 
-	provides="collective.taxonomysupport.interfaces.ITaxonomyLevel"    
+
+  <adapter
+	factory="collective.taxonomysupport.DummyAdapter"
+	for="Products.ATContentTypes.interface.interfaces.IATContentType"
+	provides="collective.taxonomysupport.interfaces.ITaxonomyLevel"
 	name="taxonomy-level"/>
 
 
@@ -47,7 +48,7 @@
         replacement=".monkey.getDefaultTaxonomy"
 		ignoreOriginal="True"
         />
-  
+
   <monkey:patch
         description="patch to add an ATCT index"
         class="Products.Archetypes.BaseObject.BaseObject"
