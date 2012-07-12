@@ -38,7 +38,7 @@ setup(name='collective.taxonomysupport',
       extras_require=dict(tests=tests_require),
       test_suite = 'collective.taxonomysupport.tests.test_docs.test_suite',
       entry_points="""
-      # -*- entry_points -*- 
+      # -*- entry_points -*-
       [z3c.autoinclude.plugin]
       target = plone
       """,

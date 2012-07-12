@@ -59,7 +59,8 @@ ATAllAreasCriterionSchema = ATBaseCriterionSchema + Schema((
 
 class ATAllAreasCriterion(ATBaseCriterion):
     """A selection criterion on all Taxonomy in the site"""
-    implements (IATTopicSearchCriterion)
+    #implements(IATTopicSearchCriterion,)
+    __implements__ = ATBaseCriterion.__implements__ + (IATTopicSearchCriterion, )
     security       = ClassSecurityInfo()
     schema         = ATAllAreasCriterionSchema
     meta_type      = 'ATAllAreasCriterion'
