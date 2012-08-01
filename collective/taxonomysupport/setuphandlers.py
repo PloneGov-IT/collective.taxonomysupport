@@ -2,7 +2,6 @@
 """
 @author: andrea cecchi
 """
-from Products.CMFCore.utils import getToolByName
 
 def Handlers(context):
     if context.readDataFile('collective.taxonomysupport_various.txt') is None:

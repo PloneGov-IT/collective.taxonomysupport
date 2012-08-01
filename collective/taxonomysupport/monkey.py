@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from collective.taxonomysupport.interfaces import ITaxonomyLayer
-from zope.component import getUtility, queryUtility
+from zope.component import queryUtility
 from zope.schema.interfaces import IVocabularyFactory
 from Products.CMFCore.utils import getToolByName
 from Acquisition import aq_chain

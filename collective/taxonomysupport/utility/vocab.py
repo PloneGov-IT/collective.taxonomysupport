@@ -1,6 +1,8 @@
-from zope.schema.vocabulary import SimpleVocabulary,SimpleTerm
+# -*- coding: utf-8 -*-
+
+from zope.schema.vocabulary import SimpleTerm
 from Products.CMFPlone.utils import getToolByName
-from collective.taxonomysupport.interfaces import ITaxonomyLevel,IFolderTaxonomy
+from collective.taxonomysupport.interfaces import ITaxonomyLevel, IFolderTaxonomy
 
 def taxonomyvocab(context):
     """
