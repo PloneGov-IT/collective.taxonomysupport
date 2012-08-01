@@ -32,13 +32,7 @@ taxonomy will be shown and so no one are selectable.
 Instructions
 ------------
 
-To activate the taxonomy level, you have to do the following steps:
-* go in the ZMI of the folder/section/taxonomy that you want to enable
-* in the "*Interfaces*" tab, add "*collective.taxonomysupport.interfaces.taxonomy_layer.ITaxonomyLevel*"
-  to the "*Provided Interfaces*" list.
-* Reindex the object (reindexing the whole catalog is the simplest way, but can take a long time)
-
-Sorry, right now the aren't any "user-friendly-Plone-UI-way" to do this.
+To activate the taxonomy level you can access the "*Add to taxonomy roots*" in the "Action" menu.
 
 You can also mark an object as a Taxonomy.
 To do this, you need to do the previous steps, but for "*collective.taxonomysupport.interfaces.folder_taxonomy.IFolderTaxonomy*"

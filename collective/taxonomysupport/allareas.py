@@ -18,15 +18,15 @@ from Products.ATContentTypes.permission import ChangeTopics
 from Products.ATContentTypes.criteria.base import ATBaseCriterion
 from Products.ATContentTypes.criteria.schemata import ATBaseCriterionSchema
 
-from Products.ATContentTypes import ATCTMessageFactory as _
+from Products.ATContentTypes import ATCTMessageFactory as atctMF
 
 from collective.taxonomysupport.interfaces import IFolderTaxonomy
 from zope.interface import implements
 
 
 CompareOperators = DisplayList((
-                    ('and', _(u'and'))
-                  , ('or', _(u'or'))
+                    ('and', atctMF(u'and'))
+                  , ('or', atctMF(u'or'))
     ))
 
 ATAllAreasCriterionSchema = ATBaseCriterionSchema + Schema((
@@ -39,8 +39,8 @@ ATAllAreasCriterionSchema = ATBaseCriterionSchema + Schema((
                 default=[],
                 vocabulary="getCurrentValues",
                 widget=MultiSelectionWidget(
-                    label=_(u'label_criteria_values', default=u'Values'),
-                    description=_(u'help_criteria_values', default=u'Existing values.')
+                    label=atctMF(u'label_criteria_values', default=u'Values'),
+                    description=atctMF(u'help_criteria_values', default=u'Existing values.')
                     ),
                 ),
     StringField('operator',
@@ -50,9 +50,9 @@ ATAllAreasCriterionSchema = ATBaseCriterionSchema + Schema((
                 default='or',
                 vocabulary=CompareOperators,
                 widget=SelectionWidget(
-                    label=_(u'label_list_criteria_operator', default=u'operator name'),
-                    description=_(u'help_list_criteria_operator',
-                                  default=u'Operator used to join the tests on each value.')
+                    label=atctMF(u'label_list_criteria_operator', default=u'operator name'),
+                    description=atctMF(u'help_list_criteria_operator',
+                                       default=u'Operator used to join the tests on each value.')
                     ),
                 ),
     ))

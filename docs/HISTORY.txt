@@ -6,6 +6,9 @@ Changelog
 
 * Added **again** Plone 4 broken compatibility
   (it will not work, but you can start the instance) [keul]
+* updated documentation [keul]
+* fixed translations [keul]
+* added proper i18ndude script [keul]
 
 1.2.1 (2012-07-12)
 ------------------

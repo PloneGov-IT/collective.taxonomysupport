@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.taxonomysupport\n"
-"POT-Creation-Date: 2010-08-26 09:48+0000\n"
+"POT-Creation-Date: 2012-08-01 10:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Andrea Cecchi <andrea.cecchi@redturtle.it>\n"
 "Language-Team: RedTurtle Technology <info@redturtle.net>\n"
@@ -15,47 +15,70 @@ msgstr ""
 "Domain: collective.taxonomysupport\n"
 
 #. Default: "A folder used to build the site taxonomy."
-#: ./profiles/default/types/FolderTaxonomy.xml
+#: ../profiles/default/types/FolderTaxonomy.xml
 msgid "A folder used to build the site taxonomy."
-msgstr "Una Cartella usata per creare la tassonomia del sito."
+msgstr "Una cartella usata per creare la tassonomia del sito."
 
-#. Default: "Folder Taxonomy"
-#: ./profiles/default/types/Structured_News.xml
-msgid "Folder Taxonomy"
-msgstr "Cartella Tassonomia"
-
-#. Default: "Site areas"
-#: extender.py
-msgid "label_site_areas"
-msgstr "Aree del sito"
-
-#. Default: "Select some site areas."
-#: extender.py
-msgid "help_site_areas"
-msgstr "Seleziona delle aree del sito."
-
-#. Default: "Site areas"
-#: ./profiles/default/portal_atct.xml
-msgid "Site areas"
-msgstr "Area del sito"
+#: ../profiles/default/types/ATAllAreasCriterion.xml
+msgid "A selection criterion on all Taxonomy in the site"
+msgstr "Un criterio di selezione su tutte le tassonomie del sito"
 
 #. Default: Add to taxonomy roots
-#: ./profiles/default/actions.xml
+#: ../profiles/default/actions.xml
 msgid "Add to taxonomy roots"
 msgstr "Aggiungi alle radici di tassonomia"
 
+#. Default: "Folder Taxonomy"
+#: ../profiles/default/types/FolderTaxonomy.xml
+msgid "Folder Taxonomy"
+msgstr "Cartella Tassonomia"
+
 #. Default: Mark the folder as taxonomy root
-#: ./profiles/default/actions.xml
+#: ../profiles/default/actions.xml
 msgid "Mark the folder as taxonomy root"
 msgstr "Indica che la cartella è una radice di tassonomia"
 
 #. Default: Remove from taxonomy roots
-#: ./profiles/default/actions.xml
+#: ../profiles/default/actions.xml
 msgid "Remove from taxonomy roots"
 msgstr "Rimuovi dall'insieme delle radici di tassonomia"
 
+#: ../profiles/default/types/ATAllAreasCriterion.xml
+msgid "Selection on site Taxonomy Criterion"
+msgstr "Criterio di selezione Tassonomie del sito"
+
 #. Default: Unmark the folder as a taxonomy root
-#: ./profiles/default/actions.xml
+#: ../profiles/default/actions.xml
 msgid "Unmark the folder as a taxonomy root"
 msgstr "Indica che la cartella non sarà più radice di tassonomia"
+
+#. Default: "Select some site areas."
+#: ../extender.py:29
+msgid "help_site_areas"
+msgstr "Seleziona delle aree del sito."
+
+#. Default: "Content already marked as taxonomy root"
+#: ../browser/taxonomy_utils.py:38
+msgid "label_content_already_taxonomyroot"
+msgstr "Il contenuto era già marcato come radice di tassonomia"
+
+#. Default: "Content was not marked as taxonomy root"
+#: ../browser/taxonomy_utils.py:52
+msgid "label_content_already_unmarked_taxonomyroot"
+msgstr "Il contenuto non era marcato come radice di tassonomia"
+
+#. Default: "Content marked as taxonomy root"
+#: ../browser/taxonomy_utils.py:34
+msgid "label_content_marked_as_taxonomyroot"
+msgstr "Il contenuto è stato marcato come radice di tassonomia"
+
+#. Default: "Content unmarked as taxonomy root"
+#: ../browser/taxonomy_utils.py:48
+msgid "label_content_unmarked_as_taxonomyroot"
+msgstr "Il contenuto è stato deselezionato come radice di tassonomia"
+
+#. Default: "Site areas"
+#: ../extender.py:28
+msgid "label_site_areas"
+msgstr "Aree del sito"
 

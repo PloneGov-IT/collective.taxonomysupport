@@ -5,6 +5,7 @@ from collective.taxonomysupport.interfaces import ITaxonomyLevel
 from Products.statusmessages.interfaces import IStatusMessage
 from zope.interface import alsoProvides, noLongerProvides
 
+from collective.taxonomysupport import taxonomysupportMessageFactory as _
 
 class CheckTaxonomyAction(BrowserView):
 
@@ -30,10 +31,12 @@ class ToggleMarkTaxonomyRoot(BrowserView):
         if not ITaxonomyLevel.providedBy(self.context):
             alsoProvides(self.context, ITaxonomyLevel)
             self.context.reindexObject()
-            messages.addStatusMessage(u"L'oggetto è marcato come radice di tassonomia",
+            messages.addStatusMessage(_('label_content_marked_as_taxonomyroot',
+                                        default=u"Content marked as taxonomy root"),
                                       type='info')
         else:
-            messages.addStatusMessage(u"L'oggetto è già marcato come radice di tassonomia",
+            messages.addStatusMessage(_('label_content_already_taxonomyroot',
+                                        default=u"Content already marked as taxonomy root"),
                                       type='warning')
         self.request.response.redirect(self.context.absolute_url())
 
@@ -42,9 +45,11 @@ class ToggleMarkTaxonomyRoot(BrowserView):
         if ITaxonomyLevel.providedBy(self.context):
             noLongerProvides(self.context, ITaxonomyLevel)
             self.context.reindexObject()
-            messages.addStatusMessage(u"L'oggetto non è più marcato come radice di tassonomia",
+            messages.addStatusMessage(_('label_content_unmarked_as_taxonomyroot',
+                                        default=u"Content unmarked as taxonomy root"),
                                       type='info')
         else:
-            messages.addStatusMessage(u"L'oggetto non era marcato come radice di tassonomia",
+            messages.addStatusMessage(_('label_content_already_unmarked_taxonomyroot',
+                                        default=u"Content was not marked as taxonomy root"),
                                       type='warning')
         self.request.response.redirect(self.context.absolute_url())
