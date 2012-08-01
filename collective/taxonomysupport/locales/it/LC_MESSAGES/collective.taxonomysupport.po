@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: collective.taxonomysupport\n"
-"POT-Creation-Date: 2012-08-01 10:20+0000\n"
+"POT-Creation-Date: 2012-08-01 12:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: Andrea Cecchi <andrea.cecchi@redturtle.it>\n"
 "Language-Team: RedTurtle Technology <info@redturtle.net>\n"
@@ -22,6 +22,9 @@ msgstr "Una cartella usata per creare la tassonomia del sito."
 #: ../profiles/default/types/ATAllAreasCriterion.xml
 msgid "A selection criterion on all Taxonomy in the site"
 msgstr "Un criterio di selezione su tutte le tassonomie del sito"
+
+msgid "Add support for taxonomies to Plone contents as a news tag-like field"
+msgstr "Aggiunge a Plone il supporto alle tassonomie sotto forma di un campo simil-tag"
 
 #. Default: Add to taxonomy roots
 #: ../profiles/default/actions.xml
@@ -46,6 +49,9 @@ msgstr "Rimuovi dall'insieme delle radici di tassonomia"
 #: ../profiles/default/types/ATAllAreasCriterion.xml
 msgid "Selection on site Taxonomy Criterion"
 msgstr "Criterio di selezione Tassonomie del sito"
+
+msgid "Taxonomy support"
+msgstr "Supporto tassonomie"
 
 #. Default: Unmark the folder as a taxonomy root
 #: ../profiles/default/actions.xml

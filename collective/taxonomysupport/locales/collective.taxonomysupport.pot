@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-08-01 10:20+0000\n"
+"POT-Creation-Date: 2012-08-01 12:21+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,6 +25,9 @@ msgstr ""
 msgid "A selection criterion on all Taxonomy in the site"
 msgstr ""
 
+msgid "Add support for taxonomies to Plone contents as a news tag-like field"
+msgstr ""
+
 #: ../profiles/default/actions.xml
 msgid "Add to taxonomy roots"
 msgstr ""
@@ -43,6 +46,9 @@ msgstr ""
 
 #: ../profiles/default/types/ATAllAreasCriterion.xml
 msgid "Selection on site Taxonomy Criterion"
+msgstr ""
+
+msgid "Taxonomy support"
 msgstr ""
 
 #: ../profiles/default/actions.xml

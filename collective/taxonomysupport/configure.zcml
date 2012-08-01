@@ -24,7 +24,7 @@
       name="default"
       title="Taxonomy support"
       directory="profiles/default"
-      description=""
+      description="Add support for taxonomies to Plone contents as a news tag-like field"
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
