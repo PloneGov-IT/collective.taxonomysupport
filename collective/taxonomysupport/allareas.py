@@ -59,11 +59,11 @@ ATAllAreasCriterionSchema = ATBaseCriterionSchema + Schema((
 
 class ATAllAreasCriterion(ATBaseCriterion):
     """A selection criterion on all Taxonomy in the site"""
-    #implements(IATTopicSearchCriterion,)
     try:
         __implements__ = ATBaseCriterion.__implements__ + (IATTopicSearchCriterion, )
     except AttributeError:
-        pass
+        implements(IATTopicSearchCriterion)
+
     security       = ClassSecurityInfo()
     schema         = ATAllAreasCriterionSchema
     meta_type      = 'ATAllAreasCriterion'
