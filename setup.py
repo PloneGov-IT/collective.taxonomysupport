@@ -14,6 +14,7 @@ setup(name='collective.taxonomysupport',
                        open(os.path.join("docs", "HISTORY.txt")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
+        'Development Status :: 4 - Beta',
         'Framework :: Plone',
         'Framework :: Plone :: 3.3',
         'Framework :: Plone :: 4.0',

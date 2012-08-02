@@ -11,7 +11,7 @@ def taxonomyvocab(context):
     pc=getToolByName(context,'portal_catalog')
     interface_name=ITaxonomyLevel.__identifier__
     #a list of all activated sections in the site
-    activated_sections=pc(object_provides =interface_name)
+    activated_sections=pc(object_provides = interface_name)
     #set of activated parents of the current object 
     parent_sections=set()
     #a list of activated paths
