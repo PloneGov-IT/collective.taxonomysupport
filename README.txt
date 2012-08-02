@@ -54,19 +54,10 @@ This product has been tested on:
 Credits
 =======
   
-Developed with the support of:
-
-* `Regione Emilia Romagna`__
-
-* `Provincia di Ferrara`__
-
-  .. image:: http://www.provincia.fe.it/Distribuzione/logo_provincia.png
-     :alt: Provincia di Ferrara - logo
-
-All of them supports the `PloneGov initiative`__.
+Developed with the support of `Regione Emilia Romagna`__;
+Regione Emilia Romagna supports the `PloneGov initiative`__.
 
 __ http://www.regione.emilia-romagna.it/
-__ http://www.provincia.fe.it/
 __ http://www.plonegov.it/
 
 Authors
