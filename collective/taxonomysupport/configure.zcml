@@ -56,7 +56,7 @@
         replacement=".monkey.SiteAreas"
 		ignoreOriginal="True"
         />
-  
+
   <monkey:patch
         description="patch to show or not areas field in archetypes"
         class="Products.Archetypes.BaseObject.BaseObject"
@@ -64,7 +64,7 @@
         replacement=".monkey.showAreas"
 		ignoreOriginal="True"
         />
-	
+
   <monkey:patch
         description="patch to add an index with UIDS"
         class="Products.Archetypes.BaseObject.BaseObject"
@@ -72,7 +72,7 @@
         replacement=".monkey.getSiteAreas"
 		ignoreOriginal="True"
         />
-		
+
   <monkey:patch
         description="patch to add an index with UIDS"
         class="Products.Archetypes.BaseObject.BaseObject"
