@@ -4,7 +4,7 @@ Changelog
 1.3.1 (unreleased)
 ------------------
 
-- added catalog.xml for "SiteAreas" metadata [andrea]
+- added catalog.xml for "SiteAreas" metadata [andreasvn]
 
 
 1.3.0 (2012-08-02)
