@@ -3,6 +3,10 @@
 @author: andrea cecchi
 """
 
+from logging import getLogger
+logger = getLogger('collective.taxonomysupport')
+
+
 def Handlers(context):
     if context.readDataFile('collective.taxonomysupport_various.txt') is None:
         return
@@ -15,15 +19,14 @@ def addKeyToCatalog(context, portal):
     @param context: context providing portal_catalog 
     '''
     pc = portal.portal_catalog
-    pl = portal.plone_log
 
     indexes = pc.indexes()
     for idx in getKeysToAdd():
         if idx[0] in indexes:
-            pl("Found the '%s' index in the catalog, nothing changed.\n" % idx[0])
+            logger.info("Found the '%s' index in the catalog, nothing changed.\n" % idx[0])
         else:
             pc.addIndex(name=idx[0], type=idx[1], extra=idx[2])
-            pl("Added '%s' (%s) to the catalog.\n" % (idx[0], idx[1]))
+            logger.info("Added '%s' (%s) to the catalog.\n" % (idx[0], idx[1]))
  
 def getKeysToAdd():
     '''
