@@ -34,28 +34,23 @@ do this using the default user from PloneTestCase:
 
 We have the login portlet, so let's use that.
 
+    >>> browser.open(portal_url+'/login_form')
     >>> browser.getControl(name='__ac_name').value = portal_owner
     >>> browser.getControl(name='__ac_password').value = default_password
     >>> browser.getControl(name='submit').click()
 
+    >>> "You are now logged in" in browser.contents
+    True
+    >>> browser.open(portal_url)
+
 Here, we set the value of the fields on the login form and then simulate a
 submit click.
 
-We then test that we are still on the portal front page:
-
-    >>> browser.url == portal_url
-    True
-
-And we ensure that we get the friendly logged-in message:
-
-    >>> "You are now logged in" in browser.contents
-    True
-    
 
 Test if taxonomy support works with default pages and so on
-    
+
     >>> from collective.taxonomysupport.interfaces import ITaxonomyLevel
-    
+
     >>> self.setRoles(('Contributor', 'Manager' ))
     >>> self.portal.invokeFactory(type_name='Folder', id='myfolder')
     'myfolder'
