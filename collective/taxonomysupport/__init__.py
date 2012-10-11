@@ -14,6 +14,7 @@ logger = logging.getLogger('collective.taxonomysupport')
 
 taxonomysupportMessageFactory = MessageFactory('collective.taxonomysupport')
 
+
 class DummyAdapter(object):
     """
     A dummy adapter to enable ITaxonomyLevel interface

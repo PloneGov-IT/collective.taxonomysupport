@@ -41,7 +41,19 @@ You can also mark any other object as a *Taxonomy-like* but to do this you need 
 Collection criteria
 -------------------
 
-This product add also a new collection criteria ("*Site Areas*") for easilly use taxonomies in (old-style) collections.
+This product add also a new collection criteria (*Site Areas*) for easilly use taxonomies in (old-style) collections.
+
+
+Updating the catalog
+====================
+Taxonomies stores 2 indexes in catalog: **getSiteAreas** and **SiteAreas**.
+
+The first index stores a list of uids fo selected taxonomies of an object, and the second (SiteAreas) stores the titles of selected taxonomies, for a human-usage.
+If you need to update the all catalog (or even rebuild it), "SiteAreas" indexes and metadata will be partially inconsistent because the indexer method make a catalog query to get the taxonomy right titles, so you need to do 2 more steps:
+
+* reindex "SiteAreas" index from portal_catalog in ZMI
+* launch a view that update metadatas for all items in the catalog with a selected taxonomy: http://your-plone-site/@@fix-metadata
+
 
 Dependencies
 ============
@@ -50,6 +62,7 @@ This product has been tested on:
 
 * Plone 3.3
 * Plone 4.2
+
 
 Credits
 =======
