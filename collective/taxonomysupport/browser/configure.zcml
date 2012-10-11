@@ -43,5 +43,11 @@
     permission="zope.Public"
     />
 
+  <browser:page
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    name="fix_metadata_view"
+    class=".fix_metadata_view.FixSiteAreasMetadata"
+    permission="cmf.ManagePortal"
+    />
 
 </configure>
