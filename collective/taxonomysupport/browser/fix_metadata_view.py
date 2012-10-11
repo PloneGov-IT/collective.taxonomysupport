@@ -32,4 +32,4 @@ class FixSiteAreasMetadata(BrowserView):
                 logger.error(element)
         else:
             pu.addPortalMessage('Update success!', 'info')
-        self.context.REQUEST.RESPONSE.redirect(self.context.portal_url())
+        return self.context.REQUEST.RESPONSE.redirect(self.context.portal_url())
