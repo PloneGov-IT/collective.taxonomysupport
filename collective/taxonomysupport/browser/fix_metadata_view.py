@@ -14,8 +14,10 @@ class FixSiteAreasMetadata(BrowserView):
         pc = getToolByName(self.context, 'portal_catalog')
         pu = getToolByName(self.context, "plone_utils")
         items = pc()
+        items_list = list(items)
         failure_list = []
-        for index, item in enumerate(items):
+        logger.info('Found %s items' % len(items))
+        for index, item in enumerate(items_list):    
             item_obj = item.getObject()
             item_path = item.getPath()
             try:
@@ -25,6 +27,9 @@ class FixSiteAreasMetadata(BrowserView):
                 failure_list.append(item_path)
         if failure_list:
             pu.addPortalMessage('There was some errors in updating the catalog. Read error log for more infos.', 'error')
+            logger.error("There was a problem updating metadatas:")
+            for element in failure_list:
+                logger.error(element)
         else:
             pu.addPortalMessage('Update success!', 'info')
-        self.context.REQUEST.RESPONSE.redirect('%s/@@fix_metadata_view' % self.context.portal_url())
+        self.context.REQUEST.RESPONSE.redirect(self.context.portal_url())
