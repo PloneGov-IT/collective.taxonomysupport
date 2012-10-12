@@ -48,7 +48,7 @@ class FixSiteAreasMetadata(BrowserView):
                     logger.error("Savepoint is invalid. Probably a subtransaction "
                         "was committed. Unable to roll back!")
                 transaction.abort()
-            if index % 100 == 0:
+            if index % 500 == 0:
                 logger.info('Creating new safepoint after %s objects' % index)
                 savepoint = transaction.savepoint()
 
