@@ -55,5 +55,12 @@
     permission="cmf.ManagePortal"
     layer="..interfaces.ITaxonomyLayer"
     />
-
+  <browser:page
+    for="Products.CMFPlone.interfaces.IPloneSiteRoot"
+    name="fix-searchabletext"
+    class=".fix_searchabletext.FixSearchableText"
+    template="fix_searchabletext.pt"
+    permission="cmf.ManagePortal"
+    layer="..interfaces.ITaxonomyLayer"
+    />
 </configure>

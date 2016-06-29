@@ -46,6 +46,9 @@ This product add also a new collection criteria (*Site Areas*) for easilly use t
 
 Updating the catalog
 ====================
+
+SiteAreas and getSiteAreas metadata
+-----------------------------------
 Taxonomies stores 2 indexes in catalog: **getSiteAreas** and **SiteAreas**.
 
 The first index stores a list of uids fo selected taxonomies of an object, and the second (SiteAreas) stores the titles of selected taxonomies, for a human-usage.
@@ -53,6 +56,14 @@ If you need to update the all catalog (or even rebuild it), "SiteAreas" indexes 
 
 * reindex "SiteAreas" index from portal_catalog in ZMI
 * launch a view that update metadatas for all items in the catalog with a selected taxonomy: http://your-plone-site/@@fix-metadata
+
+
+SearchableText index
+--------------------
+With 1.5.0 version, SiteAreas categorization is also saved in SearchableText index.
+
+To update the catalog entries before this change, there is a view that reindex SearchableText
+for all contents in the catalog with a SiteArea: http://your-plone-site/@@fix-searchabletext
 
 
 Dependencies

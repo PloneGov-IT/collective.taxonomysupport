@@ -4,7 +4,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2012-10-11 13:41+0000\n"
+"POT-Creation-Date: 2016-06-29 10:59+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,94 +17,114 @@ msgstr ""
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: collective.taxonomysupport\n"
 
-#: ./profiles/default/types/FolderTaxonomy.xml
+#: ../profiles/default/types/FolderTaxonomy.xml
 msgid "A folder used to build the site taxonomy."
 msgstr ""
 
-#: ./profiles/default/types/ATAllAreasCriterion.xml
+#: ../profiles/default/types/ATAllAreasCriterion.xml
 msgid "A selection criterion on all Taxonomy in the site"
 msgstr ""
 
-#: ./profiles/default/actions.xml
+msgid "Add support for taxonomies to Plone contents as a news tag-like field"
+msgstr ""
+
+#: ../profiles/default/actions.xml
 msgid "Add to taxonomy roots"
 msgstr ""
 
-#: ./profiles/default/types/FolderTaxonomy.xml
+#: ../profiles/default/types/FolderTaxonomy.xml
 msgid "Folder Taxonomy"
 msgstr ""
 
-#: ./profiles/default/actions.xml
+#: ../profiles/default/actions.xml
 msgid "Mark the folder as taxonomy root"
 msgstr ""
 
-#: ./profiles/default/actions.xml
+#: ../profiles/default/actions.xml
 msgid "Remove from taxonomy roots"
 msgstr ""
 
-#: ./profiles/default/types/ATAllAreasCriterion.xml
+#: ../profiles/default/types/ATAllAreasCriterion.xml
 msgid "Selection on site Taxonomy Criterion"
 msgstr ""
 
-#: ./profiles/default/actions.xml
+msgid "Taxonomy support"
+msgstr ""
+
+#: ../profiles/default/actions.xml
 msgid "Unmark the folder as a taxonomy root"
 msgstr ""
 
-#: ./browser/fix_metadata.pt:23
+#: ../browser/fix_metadata.pt:23
+#: ../browser/fix_searchabletext.pt:22
 msgid "Warning!!!"
 msgstr ""
 
 #. Default: "Select some site areas."
-#: ./extender.py:29
+#: ../extender.py:30
 msgid "help_site_areas"
 msgstr ""
 
 #. Default: "Content already marked as taxonomy root"
-#: ./browser/taxonomy_utils.py:49
+#: ../browser/taxonomy_utils.py:49
 msgid "label_content_already_taxonomyroot"
 msgstr ""
 
 #. Default: "Content was not marked as taxonomy root"
-#: ./browser/taxonomy_utils.py:64
+#: ../browser/taxonomy_utils.py:64
 msgid "label_content_already_unmarked_taxonomyroot"
 msgstr ""
 
 #. Default: "Content marked as taxonomy root"
-#: ./browser/taxonomy_utils.py:45
+#: ../browser/taxonomy_utils.py:45
 msgid "label_content_marked_as_taxonomyroot"
 msgstr ""
 
 #. Default: "Content unmarked as taxonomy root"
-#: ./browser/taxonomy_utils.py:60
+#: ../browser/taxonomy_utils.py:60
 msgid "label_content_unmarked_as_taxonomyroot"
 msgstr ""
 
 #. Default: "Site areas"
-#: ./extender.py:28
+#: ../extender.py:29
 msgid "label_site_areas"
 msgstr ""
 
 #. Default: "Update"
-#: ./browser/fix_metadata.pt:27
+#: ../browser/fix_metadata.pt:27
+#: ../browser/fix_searchabletext.pt:26
 msgid "label_update"
 msgstr ""
 
 #. Default: "This procedure may take a lot of time, because it updates metadata info for all contents in the catalog."
-#: ./browser/fix_metadata.pt:24
+#: ../browser/fix_metadata.pt:24
 msgid "metadata_warning_message"
 msgstr ""
 
+#. Default: "This procedure may take a lot of time, because it updates SearchableText info for all contents in the catalog."
+#: ../browser/fix_searchabletext.pt:23
+msgid "searchabletext_warning_message"
+msgstr ""
+
 #. Default: "There was some errors in updating the catalog. Read error log for more infos."
-#: ./browser/fix_metadata.py:38
+#: ../browser/fix_metadata.py:56
+#: ../browser/fix_searchabletext.py:51
 msgid "update_metadata_error"
 msgstr ""
 
 #. Default: "Update success!"
-#: ./browser/fix_metadata.py:45
+#: ../browser/fix_metadata.py:63
+#: ../browser/fix_searchabletext.py:58
 msgid "update_metadata_success"
 msgstr ""
 
 #. Default: "Update metadata in catalog"
-#: ./browser/fix_metadata.pt:21
+#: ../browser/fix_metadata.pt:21
 msgid "update_metadata_title"
+msgstr ""
+
+#. Default: "Update SearchableText in catalog"
+#: ../browser/fix_searchabletext.pt:20
+msgid "update_searchabletext_title"
 msgstr ""
 
