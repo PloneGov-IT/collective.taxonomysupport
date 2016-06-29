@@ -11,8 +11,8 @@ tests_require=['zope.testing']
 setup(name='collective.taxonomysupport',
       version=version,
       description="Add support for taxonomies to Plone contents as a news tag-like field",
-      long_description=open("README.txt").read() + "\n" +
-                       open(os.path.join("docs", "HISTORY.txt")).read(),
+      long_description=open("README.rst").read() + "\n" +
+                       open(os.path.join("docs", "HISTORY.rst")).read(),
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
         'Development Status :: 4 - Beta',
@@ -27,7 +27,7 @@ setup(name='collective.taxonomysupport',
       keywords='plone plonegov taxonomy',
       author='RedTurtle Technology',
       author_email='sviluppoplone@redturtle.it',
-      url='http://plone.org/products/collective.taxonomysupport',
+      url='https://github.com/PloneGov-IT/collective.taxonomysupport',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective', ],
