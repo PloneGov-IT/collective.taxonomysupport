@@ -1,6 +1,6 @@
 from zope.component import adapts
 from zope.interface import implements
-from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender, IOrderableSchemaExtender    
+from archetypes.schemaextender.interfaces import IBrowserLayerAwareExtender, IOrderableSchemaExtender
 from archetypes.schemaextender.field import ExtensionField
 
 from Products.Archetypes.atapi import LinesField,MultiSelectionWidget
@@ -25,12 +25,13 @@ class TaxonomyArchetypesExtender(object):
                                vocabulary_factory = 'collective.taxonomyvocab',
                                default_method="getDefaultTaxonomy",
                                schemata='categorization',
+                               searchable=True,
                                widget=MultiSelectionWidget(label=_(u'label_site_areas', default=u'Site areas'),
                                                            description=_(u'help_site_areas',
                                                                          default=u'Select some site areas.'),
                                                            condition="object/showAreas",
                                ),
-            
+
             )]
 
     def __init__(self, context):
