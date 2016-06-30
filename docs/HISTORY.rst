@@ -14,7 +14,7 @@ Changelog
 1.4.0 (2012-10-12)
 ------------------
 
-- Added utility view that update metadata infos for
+- Added utility view that update metadata infos [cekk]
 
 
 1.3.1 (2012-08-07)
