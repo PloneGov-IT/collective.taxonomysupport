@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.4.1 (unreleased)
+1.4.1 (2016-06-30)
 ------------------
 
 - Make taxonomy categorization searchable in SearchableText index.
